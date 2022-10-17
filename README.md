@@ -34,3 +34,8 @@ Includes Minecraft Java specific core components
 
 ### MCServe.Common.Core
 Includes common core components
+
+## components
+
+### MCServe.Common.Server
+Includes common components for the server app

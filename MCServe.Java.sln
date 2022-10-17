@@ -5,9 +5,11 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCServe.Java", "MCServe.Java\MCServe.Java.csproj", "{594C9DEC-8CF7-4B22-9447-60A41E124085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCServe.Java.Core", "MCServe.Java.Core\MCServe.Java.Core.csproj", "{82A6CF58-B9E5-454C-AB82-42F6238E5CD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCServe.Java.Core", "MCServe.Java.Core\MCServe.Java.Core.csproj", "{82A6CF58-B9E5-454C-AB82-42F6238E5CD4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCServe.Common.Core", "MCServe.Common.Core\MCServe.Common.Core.csproj", "{F1B617BE-4179-4D81-80EA-D66ED4212837}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCServe.Common.Server", "MCServe.Common.Server\MCServe.Common.Server.csproj", "{BF07C7E6-222D-4CB0-A458-C5B28C3D673D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F1B617BE-4179-4D81-80EA-D66ED4212837}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1B617BE-4179-4D81-80EA-D66ED4212837}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1B617BE-4179-4D81-80EA-D66ED4212837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF07C7E6-222D-4CB0-A458-C5B28C3D673D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF07C7E6-222D-4CB0-A458-C5B28C3D673D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF07C7E6-222D-4CB0-A458-C5B28C3D673D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF07C7E6-222D-4CB0-A458-C5B28C3D673D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
