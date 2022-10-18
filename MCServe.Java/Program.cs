@@ -3,12 +3,15 @@ using Cocona;
 using MCServe.Common.Server.Extensions;
 using MCServe.Java.Core.Extensions;
 using MCServe.Common.Core.Extensions;
+using Microsoft.Extensions.Configuration;
 
 CoconaAppBuilder? builder = CoconaApp.CreateBuilder();
 
-builder.Services.AddCommonCoreServices();
-builder.Services.AddCommonServerServices();
-builder.Services.AddJavaCoreServices();
+builder.AddAppConfiguration();
+
+builder.Services.AddCommonCoreServices()
+    .AddCommonServerServices()
+    .AddJavaCoreServices();
 
 CoconaApp? app = builder.Build();
 
