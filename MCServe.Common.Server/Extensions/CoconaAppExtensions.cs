@@ -1,5 +1,7 @@
 ﻿using Cocona;
 using Cocona.Builder;
+using MCServe.Common.Core.Interfaces;
+using MCServe.Common.Core.Services.ServerConfiguration;
 using MCServe.Common.Server.Commands;
 using Microsoft.Extensions.Configuration;
 
@@ -19,8 +21,15 @@ public static class CoconaAppExtensions
         return app;
     }
 
+    public static CoconaApp AddServerConfiguration(this CoconaApp app)
+    {
+        // load the IServerConfiguration-service
+        app.Services.GetService(typeof(IServerConfiguration));
 
-    public static void AddAppConfiguration(this CoconaAppBuilder builder)
+        return app;
+    }
+
+    public static CoconaAppBuilder UseAppConfiguration(this CoconaAppBuilder builder)
     {
         builder.Host.ConfigureAppConfiguration((host, configurationBuilder) =>
         {
@@ -31,5 +40,22 @@ public static class CoconaAppExtensions
 #endif
             .AddEnvironmentVariables();
         });
+
+        return builder;
+    }
+
+    public static CoconaAppBuilder UseServerConfiguration(this CoconaAppBuilder builder)
+    {
+        builder.ConfigureServerConfiguration((serverConfiguration) =>
+        {
+            serverConfiguration.LoadConfig("server.conf");
+        });
+
+        return builder;
+    }
+
+    public static void ConfigureServerConfiguration(this CoconaAppBuilder builder, Action<IServerConfiguration> serverConfiguration)
+    {
+        IServerConfiguration.ServerConfigurationHandler = serverConfiguration;
     }
 }
