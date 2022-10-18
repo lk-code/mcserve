@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MCServe.Bedrock": {
+      "commandName": "Project",
+      "commandLineArgs": "server --start"
+    }
+  }
+}

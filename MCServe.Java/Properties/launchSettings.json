@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MCServe.Java": {
+      "commandName": "Project",
+      "commandLineArgs": "server --start"
+    }
+  }
+}

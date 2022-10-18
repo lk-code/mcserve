@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCServe.Bedrock.Core", "MCS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCServe.Common.Core", "MCServe.Common.Core\MCServe.Common.Core.csproj", "{35917C62-18EA-4B68-A60C-699F97DFC704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCServe.Common.Server", "MCServe.Common.Server\MCServe.Common.Server.csproj", "{A00D08D4-A96E-4A28-BF7E-CBD22806820E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCServe.Common.Server", "MCServe.Common.Server\MCServe.Common.Server.csproj", "{A00D08D4-A96E-4A28-BF7E-CBD22806820E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
