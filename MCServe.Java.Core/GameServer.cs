@@ -20,8 +20,6 @@ public class GameServer : IGameServer
 
     public async Task StartAsync(CancellationToken cancellationToken)
     {
-        string? demo = this._configuration.GetSection("demo:test").Value;
-        
         await Task.CompletedTask;
 
         Console.WriteLine("start game-server for minecraft java");
