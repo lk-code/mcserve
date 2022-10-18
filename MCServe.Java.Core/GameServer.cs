@@ -1,4 +1,5 @@
 ﻿using MCServe.Common.Core.Interfaces;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace MCServe.Java.Core;
@@ -6,12 +7,15 @@ namespace MCServe.Java.Core;
 public class GameServer : IGameServer
 {
     private readonly ILogger<GameServer> _logger;
+    private readonly IConfiguration _configuration;
 
     Thread? _backgroundServer = null;
 
-    public GameServer(ILogger<GameServer> logger)
+    public GameServer(ILogger<GameServer> logger,
+        IConfiguration configuration)
     {
         this._logger = logger ?? throw new ArgumentNullException(nameof(logger));
+        this._configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
     }
 
     public async Task StartAsync(CancellationToken cancellationToken)
