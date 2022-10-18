@@ -5,9 +5,14 @@ namespace MCServe.Common.Server.Extensions;
 
 public static class CoconaAppExtensions
 {
-    public static CoconaApp ConfigureCommands(this CoconaApp app)
+    public static CoconaApp AddMCServeCommands(this CoconaApp app)
     {
-        app.AddCommands<AboutCommand>();
+        app.AddCommands<AboutCommands>();
+
+        app.AddSubCommand("server", x =>
+        {
+            x.AddCommands<ServerCommands>();
+        }).WithDescription("Server commands");
 
         return app;
     }

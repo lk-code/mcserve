@@ -2,9 +2,9 @@
 
 namespace MCServe.Common.Server.Commands;
 
-public class AboutCommand
+public class AboutCommands
 {
-    public AboutCommand()
+    public AboutCommands()
     {
 
     }
