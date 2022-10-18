@@ -8,14 +8,17 @@ public class GameServer : IGameServer
 {
     private readonly ILogger<GameServer> _logger;
     private readonly IConfiguration _configuration;
+    private readonly IServerConfiguration _serverConfiguration;
 
     Thread? _backgroundServer = null;
 
     public GameServer(ILogger<GameServer> logger,
-        IConfiguration configuration)
+        IConfiguration configuration,
+        IServerConfiguration serverConfiguration)
     {
         this._logger = logger ?? throw new ArgumentNullException(nameof(logger));
         this._configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+        this._serverConfiguration = serverConfiguration ?? throw new ArgumentNullException(nameof(serverConfiguration));
     }
 
     public async Task StartAsync(CancellationToken cancellationToken)
@@ -23,6 +26,7 @@ public class GameServer : IGameServer
         await Task.CompletedTask;
 
         Console.WriteLine("start game-server for minecraft java");
+        Console.WriteLine(this._serverConfiguration.GetConfig<string>("server-name"));
 
         if (this._backgroundServer != null)
         {
