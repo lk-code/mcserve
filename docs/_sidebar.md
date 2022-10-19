@@ -9,3 +9,4 @@
 
 - developer
   - [getting started](developer/getting-startet.md)
+  - [app-settings](developer/app-settings.md)
