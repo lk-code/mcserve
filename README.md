@@ -1,5 +1,7 @@
 # mcserve
 
+MCServe is an open-source minecraft server which is developed for the Bedrock and the Java edition. The project is developed with C# and .NET 6. Official website can be found [here](https://lk-code.github.io/mcserve/).
+
 # conventions
 
 ## naming
