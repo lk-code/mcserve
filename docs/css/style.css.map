@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAEI,SAFK,CAEL,GAAG,CAAC;EACA,MAAM,EAAE,KAAK;CAChB",
+    "sources": [
+        "style.scss",
+        "_variables.scss",
+        "_cover.scss",
+        "_navbar.scss",
+        "_content.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
